@@ -263,12 +263,14 @@
     .register-form {
       background-color: #83caad;
       .soMe-account {
+        background-color: #a8d29a;
         grid-row: 10/11;
       }
 
       .submit {
         position: relative;
         grid-row: 12/13;
+        width: 100%;
         p {
           position: absolute;
           width: 100%;
