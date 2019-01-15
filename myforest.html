@@ -20,11 +20,9 @@
 
   <body>
     <header id="myForestsHeader">
-      <!-- LOGO -->
-
       <!-- MENU -->
-      <div class="burguerMenu"><span></span> <span></span> <span></span></div>
-      <nav class="menu">
+
+      <nav class="menu hidden">
         <div class="mobile-cross">
           <img src="img/icons/cross-20.svg" alt="" />
         </div>
@@ -118,6 +116,9 @@
 
         <a href="index.html" class="menu_link" id="log-out-link">LOG OUT</a>
       </nav>
+      <a class="menu_link" href="./index.html">HOME</a>
+      <h2>MY FOREST</h2>
+      <a class="menu_link">LOG OUT</a>
     </header>
 
     <!-- ///////////// MAIN /////////////////// -->
@@ -131,11 +132,12 @@
         </nav>
 
         <div class="game">
-          <div class="badge"><img src="img/badges/badge1.svg" alt="" /></div>
+          <div class="badge"></div>
           <div class="infos-game">
             <p class="current-trees">5 TREES PLANTED !</p>
             <p class="trees-left-level-up">
-              20 TREES LEFT TO BECOME AN INFANT SEEDLING !
+              <span class="trees-left"></span> TREES LEFT TO BECOME AN
+              <span class="next-level"></span> !
             </p>
 
             <div class="level-container"><div class="level"></div></div>
@@ -147,8 +149,8 @@
 
       <div class="my-forests-options">
         <nav>
-          <a id="plant-tree-link" class="forest-selected">PLANT A TREE</a>
-          <a id="my-info-link">MY INFORMATIONS</a>
+          <a id="plant-tree-link" class="forest-selected">PLANT A TREE </a>
+          <a id="my-info-link">MY INFORMATIONS </a>
           <a id="community-link">THE COMMUNITY</a>
         </nav>
 
@@ -214,12 +216,7 @@
                 <input type="checkbox" name="newsletter" checked />
                 <span class="checkbox"></span>
               </label>
-              <input
-                class="plant-submit"
-                type="submit"
-                name="plant-submit"
-                value="PLANT !"
-              />
+              <div class="plant-submit"><p>DONATE</p></div>
             </div>
 
             <div class="myforestCC credit-card-details hidden">
@@ -252,8 +249,13 @@
               /></label>
               <label>Name:<input type="text"/></label>
               <div class="button-row">
-                <div class="go-back-plant">GO BACK</div>
-                <div class="submit">DONATE</div>
+                <div class="go-back-plant"><p>GO BACK</p></div>
+                <input
+                  class="submit"
+                  type="submit"
+                  name="plant-submit"
+                  value="PLANT !"
+                />
               </div>
             </div>
           </form>
@@ -279,8 +281,23 @@
       </div>
     </main>
     <div class="mobile-bottom-menu">
-      <div id="myForest-botttom"><h2>MyForest</h2></div>
-      <div id="options-bottom"><h2>Options</h2></div>
+      <!-- <div id="myForest-botttom"><h2>MyForest</h2></div>
+      <div id="options-bottom"><h2>Options</h2></div> -->
+      <div id="myForest-bottom" class="bottom-link bottom-selected">
+        <img class="icon" src="img/icons/bottom-mobile-39.svg" alt="" />
+      </div>
+      <div id="badge-bottom" class="bottom-link">
+        <img class="icon" src="img/icons/bottom-mobile-40.svg" alt="" />
+      </div>
+      <div id="donate-bottom" class="bottom-link">
+        <img class="icon" src="img/icons/bottom-mobile-41.svg" alt="" />
+      </div>
+      <div id="friend-bottom" class="bottom-link">
+        <img class="icon" src="img/icons/bottom-mobile-42.svg" alt="" />
+      </div>
+      <div id="community-bottom" class="bottom-link">
+        <img class="icon" src="img/icons/bottom-mobile-43.svg" alt="" />
+      </div>
     </div>
     <!-- ///////////// END OF MAIN /////////////////// -->
     <script src="myForest.js"></script>

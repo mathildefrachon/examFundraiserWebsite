@@ -87,7 +87,7 @@ svg {
   box-shadow: 5px 5px rgba(112, 81, 28, 0.6);
   h2 {
     @include text(2.1rem, white);
-    padding: 2%;
+    padding: 1rem;
   }
 }
 
@@ -421,6 +421,11 @@ footer {
 
 /* /////////// PROFILE PAGE ////////////*/
 
+.icon {
+  width: 20%;
+  display: none;
+}
+
 #myForestsHeader {
   height: 10vh;
   background: none;
@@ -467,6 +472,44 @@ footer {
   a:active {
     color: $orange;
   }
+  .thank-modal {
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    top: 15%;
+    left: 25%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: $dark_green;
+    box-shadow: 5px 10px 5px rgba($black_green, 0.6);
+    z-index: 10;
+    h1 {
+      @include title(3rem, white);
+      margin-top: 10%;
+      margin-bottom: 5%;
+    }
+    .continue-but {
+      @include button(200px, 50px);
+      @include text(2rem, white);
+    }
+  }
+}
+
+.show {
+  animation: showUp 0.3s forwards ease-in;
+}
+
+@keyframes showUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 .myForests {
@@ -480,6 +523,7 @@ footer {
       @include title(2.5rem, white);
       padding: 30px 0% 7px 0;
       text-align: center;
+      border-bottom: 2px solid rgba(white, 0.7);
     }
   }
 }
@@ -491,18 +535,21 @@ footer {
   nav {
     grid-template-columns: 1fr 1fr 1fr;
     height: fit-content;
-    border-bottom: 2px solid white;
+    // border-bottom: 2px solid white;
 
     a {
       @include text(1.5rem, white);
       padding: 30px 0% 7px 0;
       text-align: center;
+      border-bottom: 2px solid white;
     }
   }
 }
 .forest-selected {
   color: $dark_green !important;
+  border-bottom: 2px solid $dark_green !important;
 }
+
 .options,
 .game {
   width: 100%;
@@ -529,18 +576,31 @@ footer {
     background-position: bottom 0 center;
     background-attachment: local;
     background-repeat: no-repeat;
-    width: 20%;
-    height: 20%;
+    width: 120px;
+    height: 120px;
     right: 5%;
     top: 10%;
   }
+  .badge-level1 {
+    background-image: url("./img/badges/badge1.svg");
+  }
+  .badge-level2 {
+    background-image: url("./img/badges/infantSeedlingBadge.svg");
+  }
+  .badge-level3 {
+    background-image: url("./img/badges/juniorSapling.svg");
+  }
+  .badge-level4 {
+    background-image: url("./img/badges/youngTree.svg");
+  }
+  .badge-level5 {
+    background-image: url("./img/badges/matureTree.svg");
+  }
+  .badge-level6 {
+    background-image: url("./img/badges/ancientTree.svg");
+  }
 }
-.badge-level1 {
-  background-image: url("img/badges/badge1.svg");
-}
-.badge-level2 {
-  background-image: url("img/badges/infantSeedlingBadge.svg");
-}
+
 .level0 {
   background-image: url("level0.svg");
 }
@@ -549,6 +609,18 @@ footer {
 }
 .level2 {
   background-image: url("infantSeedlingbg.svg");
+}
+.level3 {
+  background-image: url("juniorSapling.svg");
+}
+.level4 {
+  background-image: url("youngTree.svg");
+}
+.level5 {
+  background-image: url("matureTree.svg");
+}
+.level6 {
+  background-image: url("ancientTree.svg");
 }
 
 .infos-game {

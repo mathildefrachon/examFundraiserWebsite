@@ -1,4 +1,8 @@
 @media only screen and (max-width: 768px) {
+  :root {
+    font-size: 52.5%;
+  }
+
   /* colors: */
 
   $beige: #e0e4bd;
@@ -191,11 +195,11 @@
         margin-left: 10%;
       }
       .getstarted {
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         grid-column: 1/-1;
         grid-row: 4/-1;
-        align-self: end;
+        align-self: center;
         margin: -5%;
       }
     }
@@ -205,6 +209,20 @@
 
   /* MODAL MOBILE STILE */
 
+  .modal-timeline {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    height: 3px;
+    z-index: 30;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .timeline-1 {
+      background-color: $orange;
+    }
+  }
+
   .modal {
     display: block;
     width: 100vw;
@@ -212,10 +230,7 @@
     border-radius: 0px;
     overflow-y: scroll;
     padding: 0;
-
-    h2 {
-      display: none;
-    }
+    background-color: $dark_green;
 
     .soMe-account {
       grid-template-columns: 3fr 1fr 1fr;
@@ -225,32 +240,76 @@
       }
     }
 
+    .titleDesktopModal {
+      display: none;
+    }
+
+    .titleMobileModal {
+      display: block;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
     .register-form,
     .login-form {
       float: none;
       width: 100%;
-      height: 85%;
-      grid-template-rows: 25px 25px 25px 25px 25px 85px 55px auto;
-      padding: 30% 10% 10% 10%;
+      height: 100%;
+      grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr auto 3fr auto 1.5fr 1.5fr;
+      padding: 20% 10% 10% 10%;
       grid-row: 7%;
     }
 
     .register-form {
-      .submit-row {
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
-        grid-row: 8/-1;
-        .newsletter {
-          grid-row: 1/2;
-          grid-column: 1/-1;
+      background-color: #83caad;
+      .soMe-account {
+        grid-row: 10/11;
+      }
+
+      .submit {
+        position: relative;
+        grid-row: 12/13;
+        p {
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          font-size: 1.8rem;
+          top: 50%;
+          transform: translateY(-50%);
         }
-        .submit {
-          grid-row: 2/3;
-          grid-column: 1/-1;
-          p {
-            padding: 6%;
-          }
+      }
+
+      .already {
+        grid-row: 13/14;
+        align-self: end;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        h3 {
+          height: fit-content;
+          align-self: end;
+          justify-self: end;
+          grid-column: 1/2;
+          font-size: 1.5rem;
+          font-weight: 300;
         }
+        a {
+          margin-left: 1rem;
+        }
+      }
+
+      .newsletter {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+        grid-row: 8/9;
+        justify-self: start;
+        .checkbox {
+          justify-self: end;
+        }
+      }
+      .terms {
+        font-size: 1.4rem;
       }
     }
 
@@ -262,11 +321,15 @@
         float: none;
       }
       .first-donation-modal {
+        background-color: #83caad;
+        grid-template-rows: 2fr 2fr 2fr 2fr 1fr 2fr 2fr 2fr 0.5fr;
         h2 {
           display: block;
+          font-size: 3rem;
+          text-align: center;
         }
         width: 100%;
-        padding: 30% 10% 10% 10%;
+        padding: 20% 10% 10% 10%;
 
         .price {
           p {
@@ -281,11 +344,26 @@
             height: fit-content;
           }
         }
+        .plantModal {
+          display: block;
+          grid-row: 8/-1;
+          grid-column: 1/-1;
+          position: relative;
+          p {
+            width: 100%;
+            text-align: center;
+            font-size: 1.8rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
       }
       .credit-card-details {
+        background-color: #83caad;
         width: 100%;
-        height: 50%;
-        padding: 0% 10% 10% 10%;
+        height: 100%;
+        padding: 20% 10% 10% 10%;
         grid-template-rows: 25px 25px 25px 25px 25px 50px;
         grid-gap: 6%;
         float: none;
@@ -297,7 +375,8 @@
 
     /* CONGRATULATION SCREEN */
     .congrats-part {
-      padding: 30% 10% 10% 10%;
+      background-color: #83caad;
+      padding: 20% 10% 10% 10%;
       height: 100%;
 
       .congrats-part-title {
@@ -348,14 +427,28 @@
       bottom: 0;
       width: 100%;
       height: 12%;
-      background-color: $yellow_green;
-      border-top: white 1px solid;
+      border-top: white 2px solid;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      #bottom-modal-login {
+        background-color: #a8d29a;
+        position: relative;
+      }
+      #bottom-modal-register {
+        background-color: #83caad;
+        position: relative;
+      }
       h2 {
+        position: absolute;
+        font-family: Oswald;
+        font-weight: 400;
+        font-size: 2.1rem;
         padding: 6%;
         display: block;
         text-align: center;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
@@ -392,6 +485,7 @@
     height: auto;
     h2 {
       margin-bottom: 10%;
+      text-align: left;
     }
     .recentDonation-post {
       height: 20vh;
@@ -413,6 +507,13 @@
     }
     .contact {
       grid-column: 3;
+      margin: 0;
+      h3 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
     .soMe-icons {
       grid-column: 2/3;
@@ -437,11 +538,48 @@
 
   ///MY FOREST PAGE ///////*/
 
+  /* HEADER */
+
+  #myForestsHeader {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 13vh;
+    padding: 0 5%;
+    .menu_link {
+      @include text(1.5rem, white);
+      align-self: center;
+    }
+    :nth-child(4) {
+      justify-self: end;
+    }
+    h2 {
+      @include title(3.1rem, white);
+      place-self: center;
+    }
+  }
+
+  /* GENERAL */
+
+  .myForests {
+    nav {
+      a {
+        padding: 15px 0 7px 0;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  /* FORM */
+
   .planttree-form {
+    height: 100%;
     .planttree-part {
-      padding-top: 5%;
-      grid-template-rows: 25px 50px 25px 50px 50px 25px 50px;
+      // padding-top: 5%;
+      padding: 10% 2%;
+      // grid-template-rows: 25px 50px 25px 50px 50px 25px 50px;
+      grid-template-rows: 1fr 2fr 1fr 2fr 2fr 1fr 2fr;
       grid-gap: 4%;
+      // grid-row-gap: 2%;
 
       .location {
         grid-row: 3/4;
@@ -449,6 +587,9 @@
 
       .countries {
         grid-row-start: 4;
+        height: 100%;
+        width: 100%;
+        align-self: end;
         h3 {
           padding: 1.2rem 0;
         }
@@ -456,6 +597,9 @@
 
       .countries2 {
         grid-row-start: 5;
+        height: 100%;
+        width: 100%;
+        align-self: start;
         h3 {
           padding: 1.2rem 0;
         }
@@ -488,8 +632,8 @@
   .myForestsMain {
     position: unset;
     display: block;
-    height: 80vh;
-    padding: 5% 5%;
+    height: 77vh;
+    padding: 2% 5% 5% 5%;
     .myForest {
       display: block;
       height: 100%;
@@ -513,31 +657,56 @@
       grid-template-rows: auto auto 25px 25px 25px 25px auto 55px;
       .button-row {
         grid-row: 8/9;
-        .go-back-plant,
-        .submit {
-          padding: 1.5rem;
-        }
       }
-    }
-    .game {
-      .infos-game {
-        p {
-          font-size: 1.2rem;
+      .game {
+        .infos-game {
+          p {
+            font-size: 1.2rem;
+          }
         }
       }
     }
   }
+
+  /* BOTTOM MENU */
+
   .mobile-bottom-menu {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 100%;
     height: 10vh;
-    background-color: #11514f;
-    h2 {
-      @include title(2rem, white);
-      text-align: center;
-      padding: 10%;
+    background-color: $black_green;
+    background-blend-mode: multiply;
+    opacity: 0.9;
+    .bottom-link {
+      position: relative;
     }
+  }
+
+  .icon {
+    display: block;
+    width: 45%;
+    margin: auto;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .my-forests-options {
+    nav {
+      display: none;
+    }
+    .options {
+      margin-top: 0;
+      padding-top: 5%;
+    }
+  }
+
+  .bottom-selected {
+    border-top: 2px solid white !important;
   }
 
   /* END MEDIA QUERY*/
