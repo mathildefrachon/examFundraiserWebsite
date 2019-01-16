@@ -465,7 +465,7 @@
           <img class="crossWhite" src="img/icons/cross-20.svg" alt="cross" />
 
           <div id="modal-step0" class="hidden">
-              <svg
+            <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -555,16 +555,6 @@
               Create an account and make your first donation to access on your
               profile & discover all our features !
             </p>
-            <img
-              class="img_step0_1 hidden"
-              src="img/mobile/modal-screenshots-32.png"
-              alt=""
-            />
-            <img
-              class="img_step0_2 hidden"
-              src="img/mobile/modal-screenshots-33.png"
-              alt=""
-            />
           </div>
 
           <form class="login-form">
@@ -719,7 +709,15 @@
               <div class="submit plantModal"><p>PLANT</p></div>
             </div>
             <div class="credit-card-details hidden">
-              <h2>MY PAYMENT INFORMATIONS:</h2>
+              <div class="pay-info-row">
+                <h2>MY PAYMENT INFORMATIONS:</h2>
+                <div class="card-img">
+                  <img src="img/icons/payment-method-visa-.png" alt="" />
+                  <img src="img/icons/master.png" alt="" />
+                  <img src="img/icons/americanexpress.png" alt="" />
+                  <img src="img/icons/dankort.png" alt="" />
+                </div>
+              </div>
 
               <label class="card-number"
                 >Card number:<input
@@ -727,16 +725,25 @@
                   pattern="[0-9]*"
                   inputmode="numeric"
                   length="16"
+                  placeholder="Credit card number"
               /></label>
-              <label
-                >Expiration date:<input
-                  type="text"
-                  pattern="[0-9]*"
-                  inputmode="numeric"
-              /></label>
-              <label
-                >CVC<input type="text" pattern="[0-9]*" inputmode="numeric"
-              /></label>
+              <div class="date-cvc-row">
+                <label class="date-col"
+                  >Expiration date:<input
+                    type="text"
+                    pattern="[0-9]*"
+                    inputmode="numeric"
+                    placeholder="MM/YY"
+                /></label>
+                <label class="cvc-col"
+                  >CVC<input
+                    type="text"
+                    pattern="[0-9]*"
+                    inputmode="numeric"
+                    placeholder="CVC"
+                /></label>
+              </div>
+
               <label>Name:<input type="text"/></label>
 
               <input
