@@ -90,6 +90,12 @@ document
   .addEventListener("click", goToPayment);
 
 function goToPayment() {
+  document.querySelector(".purchase-trees").textContent =
+    donationForm.elements.treenumber.value;
+  document.querySelector(".purchase-forest").textContent =
+    donationForm.elements.location.value;
+  document.querySelector(".purchase-price").textContent =
+    Number(donationForm.elements.treenumber.value) * 10 + "kr";
   document.querySelector(".myforestCC").classList.remove("hidden");
   document.querySelector(".planttree-part").classList.add("hidden");
 }
@@ -105,12 +111,6 @@ donationForm.addEventListener("submit", e => {
     trees: Number(donationForm.elements.treenumber.value),
     date: new Date().toDateString()
   };
-  document.querySelector(".purchase-trees").textContent =
-    donationForm.elements.treenumber.value;
-  document.querySelector(".purchase-forest").textContent =
-    donationForm.elements.location.value;
-  document.querySelector(".purchase-price").textContent =
-    Number(donationForm.elements.treenumber.value) * 10 + "kr";
 
   document.querySelector(".myforestCC").classList.add("hidden");
   document.querySelector(".planttree-part").classList.remove("hidden");
