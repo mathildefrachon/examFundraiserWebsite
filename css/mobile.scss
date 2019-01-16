@@ -60,6 +60,20 @@
       }
     }
   }
+  .myForestsMain {
+    .thank-modal {
+      width: 85%;
+      top: 35%;
+      left: 7%;
+      z-index: 50;
+      h1 {
+        font-size: 2.5rem;
+      }
+      .continue-but {
+        margin-top: 1rem;
+      }
+    }
+  }
 
   /* HEADER */
 
@@ -454,11 +468,26 @@
         width: 100%;
         height: 100%;
         padding: 20% 10% 10% 10%;
-        grid-template-rows: 25px 25px 25px 25px 25px 50px;
-        grid-gap: 6%;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+        // grid-gap: 6%;
         float: none;
+        .pay-info-row {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-row: 1/3;
+          h2 {
+            text-align: center;
+          }
+          .card-img {
+            height: 100%;
+            img {
+              width: 70%;
+            }
+          }
+        }
         .submit {
-          grid-row: 6/7;
+          grid-row: 7/8;
+          width: 100%;
         }
       }
     }
@@ -731,7 +760,14 @@
       }
     }
     .credit-card-details {
-      grid-template-rows: auto auto 25px 25px 25px 25px auto 55px;
+      .pay-info-row {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 0;
+        .card-img {
+          width: 60%;
+        }
+      }
       .button-row {
         grid-row: 8/9;
       }
