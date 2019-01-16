@@ -616,7 +616,15 @@
               <div class="submit plantModal"><p>PLANT</p></div>
             </div>
             <div class="credit-card-details hidden">
-              <h2>MY PAYMENT INFORMATIONS:</h2>
+              <div class="pay-info-row">
+                <h2>MY PAYMENT INFORMATIONS:</h2>
+                <div class="card-img">
+                  <img src="img/icons/payment-method-visa-.png" alt="" />
+                  <img src="img/icons/master.png" alt="" />
+                  <img src="img/icons/americanexpress.png" alt="" />
+                  <img src="img/icons/dankort.png" alt="" />
+                </div>
+              </div>
 
               <label class="card-number"
                 >Card number:<input
@@ -625,15 +633,18 @@
                   inputmode="numeric"
                   length="16"
               /></label>
-              <label
-                >Expiration date:<input
-                  type="text"
-                  pattern="[0-9]*"
-                  inputmode="numeric"
-              /></label>
-              <label
-                >CVC<input type="text" pattern="[0-9]*" inputmode="numeric"
-              /></label>
+              <div class="date-cvc-row">
+                <label class="date-col"
+                  >Expiration date:<input
+                    type="text"
+                    pattern="[0-9]*"
+                    inputmode="numeric"
+                /></label>
+                <label class="cvc-col"
+                  >CVC<input type="text" pattern="[0-9]*" inputmode="numeric"
+                /></label>
+              </div>
+
               <label>Name:<input type="text"/></label>
 
               <input
