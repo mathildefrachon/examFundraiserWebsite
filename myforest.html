@@ -223,7 +223,6 @@
             </div>
 
             <div class="myforestCC credit-card-details hidden">
-              <h2>MY PAYMENT INFORMATIONS:</h2>
               <div>
                 <p>
                   You have decided to plant
@@ -234,22 +233,41 @@
                   The total amount is <span class="purchase-price">price</span>
                 </p>
               </div>
+              <div class="pay-info-row">
+                <h2>MY PAYMENT INFORMATIONS:</h2>
+                <div class="card-img">
+                  <img src="img/icons/payment-method-visa-.png" alt="" />
+                  <img src="img/icons/master.png" alt="" />
+                  <img src="img/icons/americanexpress.png" alt="" />
+                  <img src="img/icons/dankort.png" alt="" />
+                </div>
+              </div>
+
               <label
                 >Card number:<input
                   type="text"
                   pattern="[0-9]*"
                   inputmode="numeric"
                   length="16"
+                  placeholder="Credit card number"
               /></label>
-              <label
-                >Expiration date:<input
-                  type="text"
-                  pattern="[0-9]*"
-                  inputmode="numeric"
-              /></label>
-              <label
-                >CVC<input type="text" pattern="[0-9]*" inputmode="numeric"
-              /></label>
+              <div class="date-cvc-row">
+                <label class="date-col"
+                  >Expiration date:<input
+                    type="text"
+                    pattern="[0-9]*"
+                    inputmode="numeric"
+                    placeholder="MM/YY"
+                /></label>
+                <label class="cvc-col"
+                  >CVC<input
+                    type="text"
+                    pattern="[0-9]*"
+                    inputmode="numeric"
+                    placeholder="CVC"
+                /></label>
+              </div>
+
               <label>Name:<input type="text"/></label>
               <div class="button-row">
                 <div class="go-back-plant"><p>GO BACK</p></div>
