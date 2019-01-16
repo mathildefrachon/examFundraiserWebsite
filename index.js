@@ -95,9 +95,15 @@ function checkIfLoggedIn() {
     document.querySelector("#log-in-link").addEventListener("click", openModal);
 
     // CLOSE THE MODAL
-    document
-      .querySelector(".modal .cross")
-      .addEventListener("click", closeModal);
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      document
+        .querySelector(".modal .cross")
+        .addEventListener("click", closeModal);
+    } else {
+      document
+        .querySelector(".modal .crossWhite")
+        .addEventListener("click", closeModal);
+    }
   }
 }
 

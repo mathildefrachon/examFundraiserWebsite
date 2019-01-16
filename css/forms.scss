@@ -61,6 +61,10 @@ input {
   left: 3%;
 }
 
+.crossWhite {
+  display: none;
+}
+
 label {
   display: block;
   position: relative;
@@ -292,6 +296,7 @@ label {
         grid-row: 2/3;
       }
       .tree-number-container {
+        // align-self: end;
         grid-row: 3/4;
       }
       .location {
@@ -435,7 +440,7 @@ label {
     display: grid;
     grid-template-columns: 48% 48%;
     // grid-template-rows: 25px 50px auto 25px 50px 50px auto 50px;
-    grid-template-rows: 1fr 2fr 1fr 1fr 2fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr 2fr 2fr auto 2fr;
     grid-gap: 4%;
 
     label {
@@ -513,11 +518,12 @@ label {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1.5fr 1fr 2fr 1.5fr;
+  align-self: end;
   input {
     background-color: $dark_green;
     text-align: center;
     width: 90%;
-    height: 90%;
+    height: 100%;
     border-radius: 10px;
     @include text(1.5rem, white);
     justify-self: center;
@@ -531,10 +537,10 @@ label {
   }
   .price {
     width: 90%;
-    height: 90%;
+    height: 100%;
     background-color: $dark_green;
     padding: 3% 7%;
-    border-radius: 3px;
+    border-radius: 10px;
     @include text(1.5rem, white);
     align-self: center;
     justify-self: center;
