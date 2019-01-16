@@ -78,7 +78,8 @@ label {
 .submit,
 .plant-submit,
 .plantModal,
-.go-back-plant {
+.go-back-plant,
+#myForest-button {
   position: relative;
 
   p {
@@ -378,8 +379,11 @@ label {
 
       img {
         position: absolute;
+        top: 0;
+        grid-row: 1/3;
         grid-column: 2/-1;
-        align-self: end;
+        justify-self: end;
+        align-self: start;
         height: 70%;
       }
     }
@@ -405,7 +409,7 @@ label {
       @include button(250px, 45px);
       float: right;
       margin-right: calc(50% - 125px);
-      padding: 1rem;
+
       margin-top: 7%;
     }
   }

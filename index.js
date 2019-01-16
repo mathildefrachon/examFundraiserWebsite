@@ -416,10 +416,8 @@ document
   .addEventListener("click", function() {
     step0.classList.add("hidden");
     loginForm.classList.remove("hidden");
-    // loginForm.style.display = "grid";
     document.querySelector("#main-register-form").classList.add("hidden");
     document.querySelector(".mobile-bottom-modalMenu").classList.add("hidden");
-    document.querySelector(".modal-timeline").classList.remove("hidden");
   });
 document
   .querySelector("#bottom-modal-register")
@@ -431,6 +429,23 @@ document
     document.querySelector(".mobile-bottom-modalMenu").classList.add("hidden");
     document.querySelector(".modal-timeline").classList.remove("hidden");
   });
+
+document
+  .querySelector(".already_register")
+  .addEventListener("click", function() {
+    registerForm.classList.add("hidden");
+    loginForm.classList.remove("hidden");
+    document.querySelector("#main-register-form").classList.add("hidden");
+    document.querySelector(".modal-timeline").classList.add("hidden");
+  });
+
+document.querySelector(".already_login").addEventListener("click", function() {
+  registerForm.classList.remove("hidden");
+  loginForm.classList.add("hidden");
+  document.querySelector("#main-register-form").style.display = "block";
+  document.querySelector("#main-register-form").classList.remove("hidden");
+  document.querySelector(".modal-timeline").classList.remove("hidden");
+});
 
 function printTotalDonations(totalTrees) {
   document.querySelector(".total-planted span").textContent = totalTrees;

@@ -47,6 +47,8 @@ document.querySelector("#why-menu-link").href =
   "index.html?id=" + userId + "#why-info";
 document.querySelector("#contact-menu-link").href =
   "index.html?id=" + userId + "#footer";
+document.querySelector(".home_link").href =
+  "index.html?id=" + userId + "#header";
 
 let brazilGameLink = document.querySelector("#brazil");
 let tanzaniaGameLink = document.querySelector("#tanzania");
