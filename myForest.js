@@ -4,7 +4,7 @@ let urlParams = new URLSearchParams(window.location.search);
 let userId = urlParams.get("id");
 
 let endpoint =
-  "http://5bfd357c827c3800139ae907.mockapi.io/treefund/user/" +
+  "https://5bfd357c827c3800139ae907.mockapi.io/treefund/user/" +
   userId +
   "/donations";
 
